@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D37C84E11ED7600E004C2051"
+               BlueprintIdentifier = "D324D9651ED7634D00ED1AF1"
                BuildableName = "LongJumpChineseCheckers.app"
                BlueprintName = "LongJumpChineseCheckers"
                ReferencedContainer = "container:LongJumpChineseCheckers.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D37C84E11ED7600E004C2051"
+            BlueprintIdentifier = "D324D9651ED7634D00ED1AF1"
             BuildableName = "LongJumpChineseCheckers.app"
             BlueprintName = "LongJumpChineseCheckers"
             ReferencedContainer = "container:LongJumpChineseCheckers.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D37C84E11ED7600E004C2051"
+            BlueprintIdentifier = "D324D9651ED7634D00ED1AF1"
             BuildableName = "LongJumpChineseCheckers.app"
             BlueprintName = "LongJumpChineseCheckers"
             ReferencedContainer = "container:LongJumpChineseCheckers.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D37C84E11ED7600E004C2051"
+            BlueprintIdentifier = "D324D9651ED7634D00ED1AF1"
             BuildableName = "LongJumpChineseCheckers.app"
             BlueprintName = "LongJumpChineseCheckers"
             ReferencedContainer = "container:LongJumpChineseCheckers.xcodeproj">

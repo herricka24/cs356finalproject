@@ -7,32 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D37C84ED1ED7600F004C2051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37C84EC1ED7600F004C2051 /* Assets.xcassets */; };
-		D37C84F01ED7600F004C2051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37C84EE1ED7600F004C2051 /* LaunchScreen.storyboard */; };
-		D37C84FD1ED76039004C2051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37C84F81ED76039004C2051 /* AppDelegate.swift */; };
-		D37C84FE1ED76039004C2051 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D37C84F91ED76039004C2051 /* background1.jpg */; };
-		D37C84FF1ED76039004C2051 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37C84FA1ED76039004C2051 /* MainViewController.swift */; };
-		D37C85001ED76039004C2051 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37C84FB1ED76039004C2051 /* TutorialViewController.swift */; };
-		D37C85011ED76039004C2051 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37C84FC1ED76039004C2051 /* ViewController.swift */; };
-		D37C85041ED7604B004C2051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37C85021ED7604B004C2051 /* Main.storyboard */; };
+		D324D9711ED7634E00ED1AF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D324D9701ED7634E00ED1AF1 /* Assets.xcassets */; };
+		D324D9741ED7634E00ED1AF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D324D9721ED7634E00ED1AF1 /* LaunchScreen.storyboard */; };
+		D324D97E1ED7636B00ED1AF1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D97B1ED7636B00ED1AF1 /* MainViewController.swift */; };
+		D324D97F1ED7636B00ED1AF1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D97C1ED7636B00ED1AF1 /* TutorialViewController.swift */; };
+		D324D9801ED7636B00ED1AF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D97D1ED7636B00ED1AF1 /* ViewController.swift */; };
+		D324D9821ED7638700ED1AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D9811ED7638700ED1AF1 /* AppDelegate.swift */; };
+		D324D9871ED763DD00ED1AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D324D9851ED763DD00ED1AF1 /* Main.storyboard */; };
+		D324D9891ED7640D00ED1AF1 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D324D9881ED7640D00ED1AF1 /* background1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D37C84E21ED7600F004C2051 /* LongJumpChineseCheckers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongJumpChineseCheckers.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D37C84EC1ED7600F004C2051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D37C84EF1ED7600F004C2051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D37C84F11ED7600F004C2051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D37C84F71ED76039004C2051 /* LongJumpChineseCheckers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LongJumpChineseCheckers-Bridging-Header.h"; sourceTree = "<group>"; };
-		D37C84F81ED76039004C2051 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../test2/test2/AppDelegate.swift; sourceTree = "<group>"; };
-		D37C84F91ED76039004C2051 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background1.jpg; path = ../../test2/test2/background1.jpg; sourceTree = "<group>"; };
-		D37C84FA1ED76039004C2051 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../../test2/test2/MainViewController.swift; sourceTree = "<group>"; };
-		D37C84FB1ED76039004C2051 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = ../../test2/test2/TutorialViewController.swift; sourceTree = "<group>"; };
-		D37C84FC1ED76039004C2051 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../test2/test2/ViewController.swift; sourceTree = "<group>"; };
-		D37C85031ED7604B004C2051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../test2/test2/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D324D9661ED7634E00ED1AF1 /* LongJumpChineseCheckers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongJumpChineseCheckers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D324D9701ED7634E00ED1AF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D324D9731ED7634E00ED1AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D324D9751ED7634E00ED1AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D324D97B1ED7636B00ED1AF1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D324D97C1ED7636B00ED1AF1 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		D324D97D1ED7636B00ED1AF1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D324D9811ED7638700ED1AF1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D324D9861ED763DD00ED1AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D324D9881ED7640D00ED1AF1 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D37C84DF1ED7600E004C2051 /* Frameworks */ = {
+		D324D9631ED7634D00ED1AF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,35 +41,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D37C84D91ED7600E004C2051 = {
+		D324D95D1ED7634D00ED1AF1 = {
 			isa = PBXGroup;
 			children = (
-				D37C84E41ED7600F004C2051 /* LongJumpChineseCheckers */,
-				D37C84E31ED7600F004C2051 /* Products */,
+				D324D9681ED7634E00ED1AF1 /* LongJumpChineseCheckers */,
+				D324D9671ED7634E00ED1AF1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D37C84E31ED7600F004C2051 /* Products */ = {
+		D324D9671ED7634E00ED1AF1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D37C84E21ED7600F004C2051 /* LongJumpChineseCheckers.app */,
+				D324D9661ED7634E00ED1AF1 /* LongJumpChineseCheckers.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D37C84E41ED7600F004C2051 /* LongJumpChineseCheckers */ = {
+		D324D9681ED7634E00ED1AF1 /* LongJumpChineseCheckers */ = {
 			isa = PBXGroup;
 			children = (
-				D37C85021ED7604B004C2051 /* Main.storyboard */,
-				D37C84F81ED76039004C2051 /* AppDelegate.swift */,
-				D37C84F91ED76039004C2051 /* background1.jpg */,
-				D37C84FA1ED76039004C2051 /* MainViewController.swift */,
-				D37C84FB1ED76039004C2051 /* TutorialViewController.swift */,
-				D37C84FC1ED76039004C2051 /* ViewController.swift */,
-				D37C84EC1ED7600F004C2051 /* Assets.xcassets */,
-				D37C84EE1ED7600F004C2051 /* LaunchScreen.storyboard */,
-				D37C84F11ED7600F004C2051 /* Info.plist */,
-				D37C84F71ED76039004C2051 /* LongJumpChineseCheckers-Bridging-Header.h */,
+				D324D97B1ED7636B00ED1AF1 /* MainViewController.swift */,
+				D324D97C1ED7636B00ED1AF1 /* TutorialViewController.swift */,
+				D324D97D1ED7636B00ED1AF1 /* ViewController.swift */,
+				D324D9851ED763DD00ED1AF1 /* Main.storyboard */,
+				D324D9701ED7634E00ED1AF1 /* Assets.xcassets */,
+				D324D9811ED7638700ED1AF1 /* AppDelegate.swift */,
+				D324D9881ED7640D00ED1AF1 /* background1.jpg */,
+				D324D9721ED7634E00ED1AF1 /* LaunchScreen.storyboard */,
+				D324D9751ED7634E00ED1AF1 /* Info.plist */,
 			);
 			path = LongJumpChineseCheckers;
 			sourceTree = "<group>";
@@ -78,13 +76,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D37C84E11ED7600E004C2051 /* LongJumpChineseCheckers */ = {
+		D324D9651ED7634D00ED1AF1 /* LongJumpChineseCheckers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D37C84F41ED7600F004C2051 /* Build configuration list for PBXNativeTarget "LongJumpChineseCheckers" */;
+			buildConfigurationList = D324D9781ED7634E00ED1AF1 /* Build configuration list for PBXNativeTarget "LongJumpChineseCheckers" */;
 			buildPhases = (
-				D37C84DE1ED7600E004C2051 /* Sources */,
-				D37C84DF1ED7600E004C2051 /* Frameworks */,
-				D37C84E01ED7600E004C2051 /* Resources */,
+				D324D9621ED7634D00ED1AF1 /* Sources */,
+				D324D9631ED7634D00ED1AF1 /* Frameworks */,
+				D324D9641ED7634D00ED1AF1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,27 +90,26 @@
 			);
 			name = LongJumpChineseCheckers;
 			productName = LongJumpChineseCheckers;
-			productReference = D37C84E21ED7600F004C2051 /* LongJumpChineseCheckers.app */;
+			productReference = D324D9661ED7634E00ED1AF1 /* LongJumpChineseCheckers.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D37C84DA1ED7600E004C2051 /* Project object */ = {
+		D324D95E1ED7634D00ED1AF1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = SOU;
 				TargetAttributes = {
-					D37C84E11ED7600E004C2051 = {
+					D324D9651ED7634D00ED1AF1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = D37C84DD1ED7600E004C2051 /* Build configuration list for PBXProject "LongJumpChineseCheckers" */;
+			buildConfigurationList = D324D9611ED7634D00ED1AF1 /* Build configuration list for PBXProject "LongJumpChineseCheckers" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,57 +117,57 @@
 				en,
 				Base,
 			);
-			mainGroup = D37C84D91ED7600E004C2051;
-			productRefGroup = D37C84E31ED7600F004C2051 /* Products */;
+			mainGroup = D324D95D1ED7634D00ED1AF1;
+			productRefGroup = D324D9671ED7634E00ED1AF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D37C84E11ED7600E004C2051 /* LongJumpChineseCheckers */,
+				D324D9651ED7634D00ED1AF1 /* LongJumpChineseCheckers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D37C84E01ED7600E004C2051 /* Resources */ = {
+		D324D9641ED7634D00ED1AF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D37C84F01ED7600F004C2051 /* LaunchScreen.storyboard in Resources */,
-				D37C84FE1ED76039004C2051 /* background1.jpg in Resources */,
-				D37C84ED1ED7600F004C2051 /* Assets.xcassets in Resources */,
-				D37C85041ED7604B004C2051 /* Main.storyboard in Resources */,
+				D324D9741ED7634E00ED1AF1 /* LaunchScreen.storyboard in Resources */,
+				D324D9711ED7634E00ED1AF1 /* Assets.xcassets in Resources */,
+				D324D9871ED763DD00ED1AF1 /* Main.storyboard in Resources */,
+				D324D9891ED7640D00ED1AF1 /* background1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D37C84DE1ED7600E004C2051 /* Sources */ = {
+		D324D9621ED7634D00ED1AF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D37C84FD1ED76039004C2051 /* AppDelegate.swift in Sources */,
-				D37C85001ED76039004C2051 /* TutorialViewController.swift in Sources */,
-				D37C85011ED76039004C2051 /* ViewController.swift in Sources */,
-				D37C84FF1ED76039004C2051 /* MainViewController.swift in Sources */,
+				D324D9821ED7638700ED1AF1 /* AppDelegate.swift in Sources */,
+				D324D97F1ED7636B00ED1AF1 /* TutorialViewController.swift in Sources */,
+				D324D9801ED7636B00ED1AF1 /* ViewController.swift in Sources */,
+				D324D97E1ED7636B00ED1AF1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D37C84EE1ED7600F004C2051 /* LaunchScreen.storyboard */ = {
+		D324D9721ED7634E00ED1AF1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D37C84EF1ED7600F004C2051 /* Base */,
+				D324D9731ED7634E00ED1AF1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		D37C85021ED7604B004C2051 /* Main.storyboard */ = {
+		D324D9851ED763DD00ED1AF1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D37C85031ED7604B004C2051 /* Base */,
+				D324D9861ED763DD00ED1AF1 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -178,7 +175,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D37C84F21ED7600F004C2051 /* Debug */ = {
+		D324D9761ED7634E00ED1AF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +225,7 @@
 			};
 			name = Debug;
 		};
-		D37C84F31ED7600F004C2051 /* Release */ = {
+		D324D9771ED7634E00ED1AF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -271,31 +268,26 @@
 			};
 			name = Release;
 		};
-		D37C84F51ED7600F004C2051 /* Debug */ = {
+		D324D9791ED7634E00ED1AF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LongJumpChineseCheckers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.LongJumpChineseCheckers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LongJumpChineseCheckers/LongJumpChineseCheckers-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		D37C84F61ED7600F004C2051 /* Release */ = {
+		D324D97A1ED7634E00ED1AF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LongJumpChineseCheckers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.LongJumpChineseCheckers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LongJumpChineseCheckers/LongJumpChineseCheckers-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -303,24 +295,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D37C84DD1ED7600E004C2051 /* Build configuration list for PBXProject "LongJumpChineseCheckers" */ = {
+		D324D9611ED7634D00ED1AF1 /* Build configuration list for PBXProject "LongJumpChineseCheckers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D37C84F21ED7600F004C2051 /* Debug */,
-				D37C84F31ED7600F004C2051 /* Release */,
+				D324D9761ED7634E00ED1AF1 /* Debug */,
+				D324D9771ED7634E00ED1AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D37C84F41ED7600F004C2051 /* Build configuration list for PBXNativeTarget "LongJumpChineseCheckers" */ = {
+		D324D9781ED7634E00ED1AF1 /* Build configuration list for PBXNativeTarget "LongJumpChineseCheckers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D37C84F51ED7600F004C2051 /* Debug */,
-				D37C84F61ED7600F004C2051 /* Release */,
+				D324D9791ED7634E00ED1AF1 /* Debug */,
+				D324D97A1ED7634E00ED1AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D37C84DA1ED7600E004C2051 /* Project object */;
+	rootObject = D324D95E1ED7634D00ED1AF1 /* Project object */;
 }
