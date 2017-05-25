@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game Board-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LongJumpChineseCheckers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameBoard" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,6 +30,9 @@
                                 <state key="normal" title="Quit Game">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="quitGameShowsMainScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QBS-lz-Rka"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-VH-YLh">
                                 <rect key="frame" x="664" y="28" width="340" height="40"/>
@@ -47,6 +51,9 @@
                                 <state key="normal" title="View Game Rules">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="showTutorialScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHu-eb-X3f"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1c-ox-aW9">
                                 <rect key="frame" x="16" y="76" width="988" height="181"/>
@@ -796,11 +803,13 @@
                         <outletCollection property="black" destination="nnT-6F-mav" collectionClass="NSMutableArray" id="orb-vq-ELX"/>
                         <outletCollection property="black" destination="gpm-nS-iAg" collectionClass="NSMutableArray" id="whh-ln-ode"/>
                         <outletCollection property="black" destination="cXJ-bk-nsi" collectionClass="NSMutableArray" id="dMh-la-usV"/>
+                        <segue destination="j5w-1d-NyB" kind="show" identifier="ShowMainSegue" id="9dr-N8-nr0"/>
+                        <segue destination="SWO-qY-eep" kind="show" identifier="ShowTutorialSegue" id="pb4-km-SLg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="761" y="-513"/>
+            <point key="canvasLocation" x="700" y="-271"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="2Yx-vZ-nQC">
@@ -814,9 +823,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWj-mt-KG6">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWj-mt-KG6">
                                 <rect key="frame" x="60" y="204" width="904" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3d-ik-ZGI">
                                         <rect key="frame" x="312" y="175" width="280" height="40"/>
@@ -826,6 +834,9 @@
                                         <state key="normal" title="View Game Rules">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showTutorialScreen:" destination="j5w-1d-NyB" eventType="touchUpInside" id="lHY-VD-fCR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdS-c6-EQ4">
                                         <rect key="frame" x="664" y="100" width="200" height="40"/>
@@ -835,15 +846,9 @@
                                         <state key="normal" title="6 Players">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-Sb-KTT">
-                                        <rect key="frame" x="40" y="100" width="200" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                        <state key="normal" title="2 Players">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
+                                        <connections>
+                                            <action selector="showSixPlayersBoard:" destination="j5w-1d-NyB" eventType="touchUpInside" id="SNc-fu-Aoa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7R-K3-P4a">
                                         <rect key="frame" x="456" y="100" width="200" height="40"/>
@@ -853,6 +858,9 @@
                                         <state key="normal" title="4 Players">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showFourPlayersBoard:" destination="j5w-1d-NyB" eventType="touchUpInside" id="oqk-YN-HTw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFL-HJ-qfP">
                                         <rect key="frame" x="248" y="100" width="200" height="40"/>
@@ -862,6 +870,9 @@
                                         <state key="normal" title="3 Players">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showThreePlayersBoard:" destination="j5w-1d-NyB" eventType="touchUpInside" id="K5X-iG-fN1"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Number of Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-Vp-RUk">
                                         <rect key="frame" x="8" y="31" width="888" height="38"/>
@@ -870,24 +881,44 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-Sb-KTT">
+                                        <rect key="frame" x="40" y="100" width="200" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <state key="normal" title="2 Players">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showTwoPlayersBoard:" destination="j5w-1d-NyB" eventType="touchUpInside" id="huj-W4-MOh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kWj-mt-KG6" firstAttribute="leading" secondItem="EDb-Ge-xzt" secondAttribute="leadingMargin" constant="40" id="5x7-5K-fhR"/>
+                            <constraint firstItem="kWj-mt-KG6" firstAttribute="centerX" secondItem="EDb-Ge-xzt" secondAttribute="centerX" id="jms-ow-MVJ"/>
+                            <constraint firstItem="1nm-y4-ECa" firstAttribute="top" secondItem="kWj-mt-KG6" secondAttribute="bottom" constant="912" id="osS-hV-oCR"/>
+                            <constraint firstItem="kWj-mt-KG6" firstAttribute="top" secondItem="SwK-jh-mzx" secondAttribute="bottom" constant="184" id="ukd-3U-ZUl"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="b1" destination="l1m-Sb-KTT" id="lBY-6Q-dd5"/>
-                        <outlet property="b2" destination="fFL-HJ-qfP" id="Ph8-Xe-SrS"/>
-                        <outlet property="b3" destination="U7R-K3-P4a" id="Ha2-x7-dlR"/>
-                        <outlet property="b4" destination="PdS-c6-EQ4" id="zgj-yk-eLh"/>
+                        <outlet property="fourPlayersButton" destination="U7R-K3-P4a" id="z0A-Ah-ycf"/>
+                        <outlet property="menuView" destination="kWj-mt-KG6" id="reW-4Q-oeH"/>
+                        <outlet property="sixPlayersButton" destination="PdS-c6-EQ4" id="XXx-Ih-IY0"/>
+                        <outlet property="threePlayersButton" destination="fFL-HJ-qfP" id="wYK-V5-9FW"/>
                         <outlet property="tutorialButton" destination="X3d-ik-ZGI" id="8tb-cf-BuM"/>
-                        <outlet property="v1" destination="kWj-mt-KG6" id="hK3-CZ-yDG"/>
+                        <outlet property="twoPlayersButton" destination="l1m-Sb-KTT" id="917-Ep-4me"/>
+                        <segue destination="SWO-qY-eep" kind="show" identifier="ShowTutorialSegue" id="mBR-9s-ZRZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowBoardSegue" id="kLk-I8-A61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqC-ZE-nNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.546875" y="122.98682284040994"/>
+            <point key="canvasLocation" x="700" y="486"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="FMp-XC-h3J">
@@ -906,16 +937,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LONG JUMP CHINESE CHECKERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="151-oZ-q6g">
-                                        <rect key="frame" x="8" y="24" width="968" height="40"/>
+                                        <rect key="frame" x="8" y="8" width="968" height="101"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IU-8F-qFF">
-                                        <rect key="frame" x="8" y="72" width="968" height="1169"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RULES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IU-8F-qFF">
+                                        <rect key="frame" x="8" y="187" width="968" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -927,7 +958,31 @@
                                         <state key="normal" title="OK">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showCorrectScreen:" destination="SWO-qY-eep" eventType="touchUpInside" id="zkW-vo-apx"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MOVES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDM-X1-a4u">
+                                        <rect key="frame" x="8" y="683" width="968" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rules guide." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="EKf-DI-9CW">
+                                        <rect key="frame" x="8" y="275" width="968" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moves guide." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="NEL-q1-Oez">
+                                        <rect key="frame" x="42" y="771" width="900" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -935,13 +990,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="b1" destination="adD-MY-kWX" id="zrn-Cm-mmK"/>
-                        <outlet property="v1" destination="936-ZN-Ja1" id="tk7-8A-xbb"/>
+                        <outlet property="movesLabel" destination="NEL-q1-Oez" id="mXq-YQ-zfh"/>
+                        <outlet property="rulesLabel" destination="EKf-DI-9CW" id="qPR-oB-U8f"/>
+                        <outlet property="tutorialButton" destination="adD-MY-kWX" id="YX5-eV-xYt"/>
+                        <outlet property="tutorialView" destination="936-ZN-Ja1" id="RcN-aZ-ACe"/>
+                        <segue destination="j5w-1d-NyB" kind="show" identifier="ShowMainSegue" id="qTS-VI-0fl"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowBoardSegue" id="SLm-9c-5IU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQo-Ym-tQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.546875" y="746.70571010248898"/>
+            <point key="canvasLocation" x="1484.765625" y="122.98682284040994"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9dr-N8-nr0"/>
+        <segue reference="SLm-9c-5IU"/>
+        <segue reference="pb4-km-SLg"/>
+    </inferredMetricsTieBreakers>
 </document>
