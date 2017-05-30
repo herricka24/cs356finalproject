@@ -36,7 +36,7 @@ class BoardViewController: UIViewController
     static let BLACK = UIColor.darkGray
     
     
-    // Action-types:
+    // Action-actions:
     @IBAction func quitGameShowsMainScreen(_ sender: UIButton)
     {
         // Perform the segue with the indicated identifier.
@@ -47,6 +47,12 @@ class BoardViewController: UIViewController
     {
         // Perform the segue with the indicated identifier.
         performSegue(withIdentifier: "ShowTutorialSegue", sender: self)
+    }
+    
+    @IBAction func clickedMarble(_ sender: UIButton)
+    {
+        let marblePosition = Int(sender.tag)
+        print(marblePosition)
     }
     
     
