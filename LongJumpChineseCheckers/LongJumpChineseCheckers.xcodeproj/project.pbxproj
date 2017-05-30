@@ -11,7 +11,7 @@
 		D324D9741ED7634E00ED1AF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D324D9721ED7634E00ED1AF1 /* LaunchScreen.storyboard */; };
 		D324D97E1ED7636B00ED1AF1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D97B1ED7636B00ED1AF1 /* MainViewController.swift */; };
 		D324D97F1ED7636B00ED1AF1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D97C1ED7636B00ED1AF1 /* TutorialViewController.swift */; };
-		D324D9801ED7636B00ED1AF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D97D1ED7636B00ED1AF1 /* ViewController.swift */; };
+		D324D9801ED7636B00ED1AF1 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D97D1ED7636B00ED1AF1 /* BoardViewController.swift */; };
 		D324D9821ED7638700ED1AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324D9811ED7638700ED1AF1 /* AppDelegate.swift */; };
 		D324D9871ED763DD00ED1AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D324D9851ED763DD00ED1AF1 /* Main.storyboard */; };
 		D324D9891ED7640D00ED1AF1 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D324D9881ED7640D00ED1AF1 /* background1.jpg */; };
@@ -24,7 +24,7 @@
 		D324D9751ED7634E00ED1AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D324D97B1ED7636B00ED1AF1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D324D97C1ED7636B00ED1AF1 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		D324D97D1ED7636B00ED1AF1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D324D97D1ED7636B00ED1AF1 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		D324D9811ED7638700ED1AF1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D324D9861ED763DD00ED1AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D324D9881ED7640D00ED1AF1 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			children = (
 				D324D97B1ED7636B00ED1AF1 /* MainViewController.swift */,
 				D324D97C1ED7636B00ED1AF1 /* TutorialViewController.swift */,
-				D324D97D1ED7636B00ED1AF1 /* ViewController.swift */,
+				D324D97D1ED7636B00ED1AF1 /* BoardViewController.swift */,
 				D324D9851ED763DD00ED1AF1 /* Main.storyboard */,
 				D324D9701ED7634E00ED1AF1 /* Assets.xcassets */,
 				D324D9811ED7638700ED1AF1 /* AppDelegate.swift */,
@@ -148,7 +148,7 @@
 			files = (
 				D324D9821ED7638700ED1AF1 /* AppDelegate.swift in Sources */,
 				D324D97F1ED7636B00ED1AF1 /* TutorialViewController.swift in Sources */,
-				D324D9801ED7636B00ED1AF1 /* ViewController.swift in Sources */,
+				D324D9801ED7636B00ED1AF1 /* BoardViewController.swift in Sources */,
 				D324D97E1ED7636B00ED1AF1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

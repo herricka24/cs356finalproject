@@ -8,44 +8,68 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
-
-
-    @IBOutlet weak var v1: UIView!
-    @IBOutlet weak var b1: UIButton!
+class TutorialViewController: UIViewController
+{
+    // Outlets:
+    @IBOutlet weak var tutorialView: UIView!
+    @IBOutlet weak var tutorialButton: UIButton!
+    @IBOutlet weak var rulesLabel: UILabel!
+    @IBOutlet weak var movesLabel: UILabel!
     
-    override func viewDidLoad() {
+    
+    // Type Properies:
+    static let RULES: String = "Short Game:\nEach player begins with ten marbles in their star point or corner. One to nine marbles can be removed by clicking on the unwanted pieces. Any of the removed pieces can be recovered by clicking on an empty space. The goal is to be the first player to move their marbles to the opposite corner and to arrange them in the same pattern as they started with."
+    static let MOVES: String = "A players turn consists of moving one marble to an adjacent empty space or jumping over adjacent marbles to an empty space. Multiple jumps are allowed during a turn. LONG JUMP CHINESE CHECKERS allows jumps over one or more marbles at a time. Double clicking on a marble at the end of a jump will end the turn. Before ending a turn, a player can click on any intermediate jump spot to return to that spot and then continue the turn on another path. A player can change marbles by clicking on any of their alternate marbles."
+    
+    
+    // Stored Property:
+    var inGame: Bool = false
+    
+    
+    // Target-action:
+    @IBAction func showCorrectScreen(_ sender: UIButton)
+    {
+        if inGame == true
+        {
+            performSegue(withIdentifier: "ShowBoardSegue", sender: self)
+        }
+        else if inGame == false
+        {
+            // Perform the segue with the indicated identifier.
+            performSegue(withIdentifier: "ShowMainSegue", sender: self)
+        }
+        else
+        {
+            print("UNFORESEEN ERROR")
+        }
+    }
+    
+    
+    // UIViewController Protocol Methods:
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        // ViewController Background
+        // ViewController Background:
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background1.jpg")!)
         
-        // Button Styles
-        b1.layer.cornerRadius = 20
-        b1.layer.borderColor = UIColor.black.cgColor
-        b1.layer.borderWidth = 3
+        // Button Layers:
+        tutorialButton.layer.cornerRadius = 20
+        tutorialButton.layer.borderColor = UIColor.black.cgColor
+        tutorialButton.layer.borderWidth = 3
         
-        // View
-        v1.layer.cornerRadius = 20
-        v1.layer.borderColor = UIColor.black.cgColor
-        v1.layer.borderWidth = 3
-        v1.layer.opacity = 0.5
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // View Layers:
+        tutorialView.layer.cornerRadius = 20
+        tutorialView.layer.borderColor = UIColor.black.cgColor
+        tutorialView.layer.borderWidth = 3
+        tutorialView.layer.opacity = 0.8
+        
+        // Labels Text:
+        rulesLabel.text = TutorialViewController.RULES
+        movesLabel.text = TutorialViewController.MOVES
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
-
 }
