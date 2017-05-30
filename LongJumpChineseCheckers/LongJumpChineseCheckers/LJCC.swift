@@ -44,26 +44,26 @@ class LJCC {
     static let RE: Int = 11//RED marble
     static let GR: Int = 4//GREEN marble
     static let PU: Int = 7//PURPLE marble
-    static let OB: Int = 1//OBSTACLE marble
+    static let BL: Int = 1//BLUE marble
+    static let OB: Int = 6//OBSTACLE marble
     static let PI: Int = 9//PINK marble
-    static let AQ: Int = 1//AQUA marble
+    static let AQ: Int = 10//AQUA marble
     static let EM: Int = 0//EMPTY Space
     static let FIRST_INDEX = 0
     //Phases
     static let OBSTACLE_PHASE = 1000
     //methods
-    func changeImage(pClicked: String) {//the clicked position is given as a String from the button tag
-        let positionClicked: Int = Int(pClicked)!
-        if gamePhase == LJCC.OBSTACLE_PHASE && picIn[positionClicked] == LJCC.EM && obstacleIsAllowed(boardPosition: positionClicked) == true {
-            picIn[positionClicked] = LJCC.OB;
+    func changeImage(boardPosition: Int) {//the clicked position is given as a String from the button tag
+        if gamePhase == LJCC.OBSTACLE_PHASE && picIn[boardPosition] == LJCC.EM && obstacleIsAllowed(boardPosition: boardPosition) == true {
+            picIn[boardPosition] = LJCC.OB;
         }//endif
-        if gamePhase == LJCC.OBSTACLE_PHASE && picIn[positionClicked] == LJCC.OB {
-            picIn[positionClicked] = LJCC.EM;
+        if gamePhase == LJCC.OBSTACLE_PHASE && picIn[boardPosition] == LJCC.OB {
+            picIn[boardPosition] = LJCC.EM;
         }//endif
         else if (gamePhase == LJCC.OBSTACLE_PHASE) {
             return;
-        }
-    }
+        }//endelseif
+    }//end func changeImage
     func obstacleIsAllowed (boardPosition: Int) -> Bool {
         for currIndex in LJCC.FIRST_INDEX..<LJCC.CENTER_BOARD_POSITIONS.count {
             if LJCC.CENTER_BOARD_POSITIONS[currIndex] == boardPosition {

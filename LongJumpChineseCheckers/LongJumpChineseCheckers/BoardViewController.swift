@@ -25,6 +25,10 @@ class BoardViewController: UIViewController
     @IBOutlet var black: [UIButton]!
     
     
+    // Model
+    let theModel: LJCC = LJCC()
+    
+    
     // Type Properties:
     static let RED = UIColor.red
     static let GREEN = UIColor.green
@@ -36,7 +40,7 @@ class BoardViewController: UIViewController
     static let BLACK = UIColor.darkGray
     
     
-    // Action-actions:
+    // Target-actions:
     @IBAction func quitGameShowsMainScreen(_ sender: UIButton)
     {
         // Perform the segue with the indicated identifier.
@@ -52,7 +56,8 @@ class BoardViewController: UIViewController
     @IBAction func clickedMarble(_ sender: UIButton)
     {
         let marblePosition = Int(sender.tag)
-        print(marblePosition)
+        theModel.changeImage(boardPosition: marblePosition)
+        updateBoard()
     }
     
     
@@ -67,9 +72,83 @@ class BoardViewController: UIViewController
     
     func obstacles()
     {
-        for index in 0..<black.count
+        for index in LJCC.FIRST_INDEX..<black.count
         {
             circle(circle: black[index], color: BoardViewController.BLACK)
+        }
+    }
+    
+    func updateBoard()
+    {
+        var currColor: Int
+        for index in 0..<theModel.picIn.count
+        {
+            currColor = theModel.picIn[index]
+            if let button = self.view.viewWithTag(index) {
+                if colorToInt(color: button.backgroundColor!) != currColor && currColor != LJCC.NP {
+                    button.layer.backgroundColor = getColor(colorNumber: currColor)!
+                }
+            }
+        }
+    }
+    
+    func getColor(colorNumber: Int) -> CGColor? {
+        if colorNumber == LJCC.RE {
+            return BoardViewController.RED.cgColor
+        }
+        else if colorNumber == LJCC.GR {
+            return BoardViewController.GREEN.cgColor
+        }
+        else if colorNumber == LJCC.PU {
+            return BoardViewController.PURPLE.cgColor
+        }
+        else if colorNumber == LJCC.BL {
+            return BoardViewController.BLUE.cgColor
+        }
+        else if colorNumber == LJCC.PI {
+            return BoardViewController.PINK.cgColor
+        }
+        else if colorNumber == LJCC.AQ {
+            return BoardViewController.AQUA.cgColor
+        }
+        else if colorNumber == LJCC.OB {
+            return BoardViewController.BLACK.cgColor
+        }
+        else if colorNumber == LJCC.EM {
+            return BoardViewController.GRAY.cgColor
+        }
+        else {
+            return nil
+        }
+    }
+    
+    func colorToInt(color: UIColor) -> Int? {
+        if color == BoardViewController.RED {
+            return LJCC.RE
+        }
+        else if color == BoardViewController.GREEN {
+            return LJCC.GR
+        }
+        else if color == BoardViewController.PURPLE {
+            return LJCC.PU
+        }
+        else if color == BoardViewController.BLUE {
+            return LJCC.BL
+        }
+        else if color == BoardViewController.PINK {
+            return LJCC.PI
+        }
+        else if color == BoardViewController.AQUA {
+            return LJCC.AQ
+        }
+        else if color == BoardViewController.BLACK {
+            return LJCC.OB
+        }
+        else if color == BoardViewController.GRAY {
+            return LJCC.EM
+        }
+        else {
+            return nil
         }
     }
     
